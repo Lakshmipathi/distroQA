@@ -1,0 +1,11 @@
+Setup Debian10.1 Installer:
+   - wait.ins:300
+Boot Menu:
+   - enter.key:300
+Select language:
+   - enter.key:20
+Select location:
+   - enter.key:20
+Select Keyboard layout:
+   - enter.key:60
+   - continue_button.png:0

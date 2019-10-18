@@ -1,0 +1,29 @@
+Hostname and network config:
+   - rv_sendkey_button.png:10
+   - rv_sendkey_ctrl_alt_f5.png:10
+   - configure_network.png:60
+   - enter.key:20
+   - enter.key:20
+Setup Password:
+   - setup_user_passwd.png:60
+   - debian.type:1
+   - tab.key:1
+   - tab.key:1
+   - debian.type:1
+   - tab.key:1
+   - tab.key:1
+   - enter.key:20
+Setup sudo User:
+   - debian.type:1
+   - enter.key:20
+   - enter.key:20
+Setup sudo password:
+   - debian.type:1
+   - tab.key:1
+   - tab.key:1
+   - debian.type:1
+   - tab.key:1
+   - tab.key:1
+   - enter.key:20
+Setup Clock:
+   - enter.key:180

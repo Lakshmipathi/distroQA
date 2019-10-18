@@ -1,0 +1,4 @@
+images/baseimage/open_terminal/open_terminal.yml
+images/baseimage/launch_qemu/launch_qemu.yml
+images/baseimage/launch_viewer/launch_viewer.yml
+images/debian10/debian10-installer-lang-location-keybd-amd64.yml

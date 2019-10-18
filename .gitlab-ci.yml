@@ -10,12 +10,12 @@ stages:
   - test
   - deploy
 
-Hello World Test:
+Debian Installer test:
   stage: test
   services:
     - docker:18.09.7-dind
   script:
-     - sh run_tests.sh hello_world.task
+     - sh run_tests.sh debian10-setup-installer-amd64.task debian10-installer-lang-location-keybd-amd64.task debian10-installer-nw-useraccnt-clock-amd64.task debian10-installer-partition-amd64.task debian10-installer-apt-sw-selection-amd64.task debian10-installer-finish-reboot-login-amd64.task
   artifacts:
     when: always
     paths:

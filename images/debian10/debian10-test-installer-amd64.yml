@@ -1,0 +1,77 @@
+Setup Debian10.1 Installer:
+   - wait.ins:300
+Boot Menu:
+   - enter.key:300
+Select language:
+   - enter.key:20
+Select location:
+   - enter.key:20
+Select Keyboard layout:
+   - enter.key:600
+Hostname and network config:
+   - rv_sendkey_button.png:10
+   - rv_sendkey_ctrl_alt_f5.png:10
+   - configure_network.png:60
+   - enter.key:20
+   - enter.key:20
+Setup Password:
+   - setup_user_passwd.png:60
+   - debian.type:1
+   - tab.key:1
+   - tab.key:1
+   - debian.type:1
+   - tab.key:1
+   - tab.key:1
+   - enter.key:20
+Setup sudo User:
+   - debian.type:1
+   - enter.key:20
+   - enter.key:20
+Setup sudo password:
+   - debian.type:1
+   - tab.key:1
+   - tab.key:1
+   - debian.type:1
+   - tab.key:1
+   - tab.key:1
+   - enter.key:20
+Setup Clock:
+   - enter.key:180
+Setup Disk Partition:
+   - enter.key:60
+   - enter.key:60
+   - enter.key:60
+   - enter.key:60
+   - down.key:5
+   - enter.key:600
+Assert GUI Console:
+   - rv_sendkey_button.png:10
+   - rv_sendkey_ctrl_alt_f5.png:10
+Setup package mirror:
+   - up.key:10
+   - enter.key:300
+Assert GUI Console:
+   - rv_sendkey_button.png:10
+   - rv_sendkey_ctrl_alt_f5.png:10
+Join Survey:
+   - enter.key:30
+Software Selection:
+   - space.key:2
+   - tab.key:5
+   - enter.key:3600
+Assert GUI Console:
+   - rv_sendkey_button.png:10
+   - rv_sendkey_ctrl_alt_f5.png:10
+Software Selection Continue:
+   - enter.key:10
+   - down.key:10
+   - enter.key:40
+Finish the installation:
+   - enter.key:10
+Boot to New OS:
+   - enter.key:10
+Login to GUI:
+   - debian.type:10
+   - tab.key:10
+   - debian.type:10
+   - enter.key:60

@@ -1,0 +1,13 @@
+Assert GUI Console:
+   - rv_sendkey_button.png:10
+   - rv_sendkey_ctrl_alt_f5.png:10
+   - wait.ins:10
+Finish the installation:
+   - enter.key:60
+Boot to New OS:
+   - enter.key:180
+Login to GUI:
+   - debian.type:10
+   - tab.key:10
+   - debian.type:10
+   - enter.key:120
