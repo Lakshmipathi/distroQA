@@ -1,0 +1,2 @@
+cd /qemu
+sh ./launch.sh

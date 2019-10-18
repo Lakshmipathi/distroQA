@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Copyright © 2019 Collabora Ltd.
+#
+# SPDX-License-Identifier: MIT
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be included
+# in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+# IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+# CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+# TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+out=$(hostname).mpg
+out_mp4="$2.mp4"
+logdir="/results/$(hostname)/$2"
+viddir="/results/$(hostname)/final_video"
+
+mkdir -p $logdir
+mkdir -p $viddir
+if [ $1 == "start" ]; then
+        rm -f $logdir/$out
+	ffmpeg -video_size 1366x670 -framerate 25 -f x11grab -i :1.0 -qscale 0 $logdir/$out &> /dev/null & 
+	echo $! > /tmp/ffmpeg.pid
+elif [ $1 == "stop" ]; then
+	kill `cat /tmp/ffmpeg.pid`
+	rm /tmp/ffmpeg.pid
+elif [ $1 == "speedup" ]; then
+        ffmpeg -i $logdir/$out -filter:v "setpts=PTS/5" $logdir/$out_mp4 &> /dev/null
+        rm -f $logdir/$out
+elif [ $1 == "merge" ]; then
+	ls -1rt `find /results/$(hostname)/ -type f -name \*.mp4 -not -name complete_video.mp4` |  xargs -i echo "file {}" > $logdir/../fileslist.txt
+        ffmpeg -f concat -safe 0 -i $logdir/../fileslist.txt -c copy "$viddir/complete_video.mp4";
+else 
+     echo "Invalid option"
+fi
+

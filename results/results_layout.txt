@@ -1,0 +1,13 @@
+This result directory structured as follows:
+
+results/unique-id/taskname-1/
+
+results$ tree
+.
+└── <unique-id>
+    └── Task-1
+        ├── final_video.mp4
+        ├── action1_image.yml.png
+        ├── action2_image.yml.png
+        └── result.png
+

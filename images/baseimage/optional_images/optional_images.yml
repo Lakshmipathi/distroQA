@@ -1,0 +1,5 @@
+Launching Terminal with optional images:
+    - [ "systemtool.png:2", "startmenu.png:15" ]
+    - systemtool.png:2
+    - terminal_open.png
+    - terminal_ready.png:1
