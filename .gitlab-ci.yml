@@ -15,7 +15,7 @@ Hello World Test:
   services:
     - docker:18.09.7-dind
   script:
-     - sh run_tests.sh ubuntu19.10-setup-installer-amd64.task ubuntu19.10-installer-welcome-keybd-software.yml ubuntu19.10-installer-partition-setup.yml ubuntu19.10-installer-location-useracc.yml ubuntu19.10-installer-install-basesystem.yml ubuntu19.10-installer-restart-login.yml
+     - sh run_tests.sh ubuntu19.10-setup-installer-amd64.task ubuntu19.10-installer-welcome-keybd-software.task ubuntu19.10-installer-partition-setup.task ubuntu19.10-installer-location-useracc.task ubuntu19.10-installer-install-basesystem.task ubuntu19.10-installer-restart-login.task
   artifacts:
     when: always
     paths:
