@@ -2,7 +2,7 @@
 set -xu
 apt-get install wmctrl xdotool -y
 term_id=$(xdotool getactivewindow)
-remote-viewer spice://localhost:5924 &
+remote-viewer -f spice://localhost:5924 &
 pid=$!
 sleep 2
 wid=$(wmctrl -lp | grep ${pid} | cut "-d " -f1)

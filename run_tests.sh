@@ -43,7 +43,7 @@ DOCKER_OPTS=" --privileged --device /dev/kvm -itd  $USE_PORT "
 DOCKER_OPTS=" $DOCKER_OPTS -e RESOLUTION=1920x1080 -e PYTHONIOENCODING=utf8 -e GZ_FILE=$GZ_FILE"
 VOL_OPTS=" -v `pwd`:/test -v `pwd`/qemu:/qemu -v `pwd`/results:/results "
 
-did=$(docker run $DOCKER_OPTS $VOL_OPTS laks/gui_tester)
+did=$(docker run $DOCKER_OPTS $VOL_OPTS laks/gui_tester:screen_recorder)
 
 printf "Please wait for 10 seconds"; 
 sleep 10

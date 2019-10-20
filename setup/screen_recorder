@@ -28,12 +28,13 @@ out=$(hostname).mpg
 out_mp4="$2.mp4"
 logdir="/results/$(hostname)/$2"
 viddir="/results/$(hostname)/final_video"
+dimen=$(xdpyinfo | awk '/dimensions/{print $2}')
 
 mkdir -p $logdir
 mkdir -p $viddir
 if [ $1 == "start" ]; then
         rm -f $logdir/$out
-	ffmpeg -video_size 1366x670 -framerate 25 -f x11grab -i :1.0 -qscale 0 $logdir/$out &> /dev/null & 
+	ffmpeg -video_size $dimen -framerate 25 -f x11grab -i :1.0 -qscale 0 $logdir/$out &> /dev/null &
 	echo $! > /tmp/ffmpeg.pid
 elif [ $1 == "stop" ]; then
 	kill `cat /tmp/ffmpeg.pid`
