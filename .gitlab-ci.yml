@@ -15,7 +15,7 @@ Hello World Test:
   services:
     - docker:18.09.7-dind
   script:
-     - sh run_tests.sh hello_world.task
+     - sh run_tests.sh ubuntu19.10-setup-installer-amd64.task ubuntu19.10-test-installer-amd64.task
   artifacts:
     when: always
     paths:

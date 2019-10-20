@@ -1,0 +1,4 @@
+images/baseimage/open_terminal/open_terminal.yml
+images/baseimage/launch_qemu/launch_qemu.yml
+images/baseimage/launch_viewer/launch_viewer.yml
+images/ubuntu19.10/ubuntu19.10-test-installer.yml

@@ -1,0 +1,3 @@
+cp /test/images/ubuntu19.10/launch_iso.sh /qemu/launch.sh
+cp /test/setup/launch_viewer.sh /qemu/
+exit
