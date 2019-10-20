@@ -1,0 +1,6 @@
+Reboot and Login:
+  - enter.key:60
+  - enter.key:120
+  - enter.key:10
+  - ubuntu.type:5
+  - enter.key:120
